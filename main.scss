@@ -1,12 +1,13 @@
 // VARIABLES
 
-// - COLORS
+// - COLORS -
+$color-accent: #2cc695;
 $color-white: #fff;
 $color-grey-light: #eef3f4;
 $color-grey-medium: #a9b4b7;
 $color-grey-dark: #555a5b;
 
-// - TRANSITIONS
+// - TRANSITIONS -
 $ts-all-z2: all 0.2;
 
 // RESET
@@ -43,6 +44,28 @@ a {
   text-decoration: none;
 }
 
+// UTILITY CLASSES
+
+.u-italic {
+  font-style: italic;
+}
+
+.u-accent {
+  color: $color-accent;
+}
+
+.u-underline {
+  text-decoration: underline;
+}
+
+.u-bold {
+  font-weight: 500;
+}
+
+.u-bolder {
+  font-weight: 700;
+}
+
 // BASE STYLES
 
 .page {
@@ -70,7 +93,7 @@ a {
 
 // STYLES
 
-// - HEADER
+// - HEADER -
 
 .header {
   grid-column: 1/-1;
@@ -156,10 +179,96 @@ a {
   }
 }
 
+// - SIDEBAR -
+
 .sidebar {
   grid-column: 1/2;
   grid-row: 2/-1;
   background-color: #11271f;
+}
+
+.intro {
+  padding: 48px 35px 45px;
+  border-bottom: 1px solid rgba($color-white, 0.1);
+
+  &__text {
+    color: $color-grey-light;
+    font-size: 16px;
+    margin-top: 12px;
+    line-height: 1.8;
+  }
+}
+
+.first-heading {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 30px;
+
+  &__img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid $color-white;
+
+    &:not(:first-child) {
+      margin-left: -8px;
+    }
+  }
+
+  &__container {
+    margin-left: 10px;
+  }
+
+  &__number {
+    font-weight: 500;
+  }
+
+  &__text {
+    margin-top: -5px;
+    font-size: 12px;
+    color: $color-grey-medium;
+  }
+}
+
+.auth {
+  &__text {
+    color: $color-grey-medium;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 6px;
+  }
+
+  &__link {
+    font-weight: 500;
+    color: $color-accent;
+  }
+}
+
+.btn {
+  display: block;
+  padding: 12px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: #16b47f;
+  transition: $ts-all-z2;
+
+  &:hover,
+  &:focus {
+    background-color: #119267;
+  }
+
+  &__icon {
+    margin-left: 2px;
+  }
 }
 
 .gallery {

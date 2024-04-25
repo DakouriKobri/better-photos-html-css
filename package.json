@@ -1,0 +1,15 @@
+{
+  "name": "better-photos",
+  "version": "1.0.0",
+  "description": "The HTML & CSS for a photo sharing app",
+  "main": "index.js",
+  "scripts": {
+    "compileSass": "npx sass --watch --no-source-map main.scss style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.75.0"
+  }
+}

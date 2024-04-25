@@ -1,0 +1,175 @@
+// VARIABLES
+
+// - COLORS
+$color-white: #fff;
+$color-grey-light: #eef3f4;
+$color-grey-medium: #a9b4b7;
+$color-grey-dark: #555a5b;
+
+// - TRANSITIONS
+$ts-all-z2: all 0.2;
+
+// RESET
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-width: none; /* Firefox*/
+}
+
+input {
+  font: inherit;
+  border: none;
+}
+
+button {
+  border: none;
+  background-color: initial;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// BASE STYLES
+
+.page {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: $color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://bytegrad.com/course-assets/css/2/pattern.svg),
+    linear-gradient(to bottom right, #8fd861, #2cc695 90%);
+}
+
+.app {
+  width: 1240px;
+  height: 1030px;
+  background-color: $color-white;
+  box-shadow: 0 25px 150px rgba(0, 0, 0, 0.56);
+  margin: 80px 0;
+
+  display: grid;
+  grid-template-columns: 355px 1fr;
+  grid-template-rows: 65px 724px 1fr;
+}
+
+// STYLES
+
+// - HEADER
+
+.header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background-color: $color-white;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 20px;
+  margin-right: 48px;
+}
+
+.search {
+  position: relative;
+
+  &__input {
+    padding: 0 18px;
+    color: $color-grey-dark;
+    background-color: $color-grey-light;
+    height: 34px;
+    width: 405px;
+    border-radius: 50px;
+    font-size: 13px;
+    outline: none;
+    transition: $ts-all-z2;
+
+    &::placeholder {
+      color: $color-grey-medium;
+    }
+
+    &:focus {
+      width: 425px;
+    }
+  }
+
+  &__submit {
+    font-size: 15px;
+    color: $color-grey-medium;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 18px;
+    transition: $ts-all-z2;
+
+    &:focus,
+    &:hover {
+      color: $color-grey-dark;
+    }
+  }
+
+  &__icon {
+  }
+}
+
+.nav {
+  margin-left: auto;
+  color: $color-grey-medium;
+  font-size: 22px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    height: 65px;
+    padding: 0 20px;
+    transition: $ts-all-z2;
+    display: block;
+    line-height: 65px; /* Using same value as height to center element  */
+
+    &:hover,
+    &:hover {
+      background-color: $color-grey-light;
+    }
+  }
+
+  &__icon {
+  }
+}
+
+.sidebar {
+  grid-column: 1/2;
+  grid-row: 2/-1;
+  background-color: #11271f;
+}
+
+.gallery {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: $color-grey-light;
+}
+
+.steps {
+  grid-column: 2/-1;
+  grid-row: 3/-1;
+  background-color: #e7edee;
+}

@@ -7,6 +7,9 @@ $color-grey-light: #eef3f4;
 $color-grey-medium: #a9b4b7;
 $color-grey-dark: #555a5b;
 
+// - BORDERS -
+$separator: 1px solid rgba($color-white, 0.1);
+
 // - TRANSITIONS -
 $ts-all-z2: all 0.2;
 
@@ -181,6 +184,8 @@ a {
 
 // - SIDEBAR -
 
+// -- INTRO --
+
 .sidebar {
   grid-column: 1/2;
   grid-row: 2/-1;
@@ -189,7 +194,7 @@ a {
 
 .intro {
   padding: 48px 35px 45px;
-  border-bottom: 1px solid rgba($color-white, 0.1);
+  border-bottom: $separator;
 
   &__text {
     color: $color-grey-light;
@@ -268,6 +273,57 @@ a {
 
   &__icon {
     margin-left: 2px;
+  }
+}
+
+// -- UPLOAD --
+
+.upload {
+  padding: 45px 35px;
+  border-bottom: $separator;
+  color: $color-grey-medium;
+
+  &__container {
+    height: 330px;
+    border-radius: 3px;
+    background-color: rgba($color-white, 0.03);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: $ts-all-z2;
+    position: relative;
+    overflow: hidden;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($color-white, 0.06);
+    }
+
+    &::before {
+      content: '';
+      border: 2px dashed #434747;
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: -1px;
+      right: -1px;
+    }
+  }
+
+  &__icon {
+    font-size: 23px;
+  }
+
+  &__text {
+    margin-top: 8px;
+    color: $color-white;
+  }
+
+  &__alternative {
+    margin-top: -2px;
+    font-size: 12px;
   }
 }
 

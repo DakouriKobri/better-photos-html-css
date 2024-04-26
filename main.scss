@@ -327,6 +327,31 @@ a {
   }
 }
 
+// -- FOOTER --
+
+.footer {
+  padding-top: 50px;
+  padding-left: 35px;
+  font-size: 11px;
+  color: rgba($color-grey-medium, 0.6);
+
+  &__list {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+}
+
+.copyright {
+  font-size: inherit;
+}
+
 .gallery {
   grid-column: 2/3;
   grid-row: 2/3;

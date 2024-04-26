@@ -142,6 +142,7 @@ a {
 .search__submit:focus, .search__submit:hover {
   color: #555a5b;
 }
+
 .nav {
   margin-left: auto;
   color: #a9b4b7;
@@ -160,6 +161,7 @@ a {
 .nav__link:hover, .nav__link:hover {
   background-color: #eef3f4;
 }
+
 .sidebar {
   grid-column: 1/2;
   grid-row: 2/-1;
@@ -315,6 +317,7 @@ a {
     justify-content: center;
   }
 }
+
 .copyright {
   font-size: inherit;
 }
